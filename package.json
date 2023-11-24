@@ -1,0 +1,19 @@
+{
+  "name": "weekly",
+  "description": "Skylar的周刊，记录Skylar有趣的生活，希望你喜欢",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0522skylar/weekly.git"
+  },
+  "author": {
+    "name": "0522skylar",
+    "email": "2031499619@qq.com"
+  },
+  "license": "MIT",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
+}
