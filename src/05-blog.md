@@ -3,7 +3,7 @@
 16 Dec, 2023
 
 
-![Snipaste_2023-12-16_20-37-56.jpg](https://cdn.nlark.com/yuque/0/2023/jpeg/12537228/1702730360224-9662bd9b-8a12-452f-a171-7404396763b9.jpeg#averageHue=%2390968f&clientId=u968b7962-3006-4&from=paste&height=722&id=u90075d64&originHeight=902&originWidth=1202&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=354771&status=done&style=none&taskId=uf29ca732-47a4-4e13-bc4f-602e830dd2d&title=&width=961.6)
+![Snipaste_2023-12-16_20-37-56.jpg](https://www.freeimg.cn/i/2023/12/24/6587169b5d899.jpg)
 
 
 广州的邮政博览馆，虽然没有走进去看看，但是光是看着外表，就感受到古典和庄严的气氛，这就是在珠江附近走走遇到的，就随手拍下来了。
@@ -18,8 +18,6 @@
 
 正是由于CORS（跨源资源共享），所以POST请求，会在请求之前发送一个OPTION请求（预检请求），所以发送了两次请求。
 
-
-![](https://cdn.nlark.com/yuque/0/2023/webp/12537228/1702433959985-61c25b9d-a3b5-4162-96c9-0a4f597c1d6f.webp#averageHue=%23f3f3f3&clientId=u606ff110-daaa-4&from=paste&id=ue06d665b&originHeight=1721&originWidth=967&originalType=url&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u5a78e2f9-485b-4c5d-9147-f6ece16c379&title=)
 
 #### 如何实现H5秒开
 

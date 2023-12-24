@@ -2,7 +2,7 @@
 
 欢迎来到Skylar的周刊！
 
-![Cheatsheet image example](https://i.ibb.co/tbJbTQf/yangwang.png)
+![Cheatsheet image example](https://www.freeimg.cn/i/2023/12/24/6587171e08e01.png)
 
 我是Skylar，我目前是一个前端开发者。
 
