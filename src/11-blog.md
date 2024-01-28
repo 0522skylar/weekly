@@ -64,7 +64,7 @@
 [https://ai-cartoon-figure.club/home](https://ai-cartoon-figure.club/home)
 一键将图片转换成日漫风、3D 风、手绘风等等
 
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/12537228/1706151934994-e34d725f-a8f4-47eb-9926-104f773a2767.png#averageHue=%23c5cac3&clientId=uded08a9d-ce37-4&from=paste&height=676&id=ua198dd9c&originHeight=676&originWidth=1120&originalType=binary&ratio=1&rotation=0&showTitle=false&size=819247&status=done&style=none&taskId=uf21e52cd-8f1a-440f-8e76-aac709bd4c8&title=&width=1120)
+![image.png](https://www.freeimg.cn/i/2024/01/28/65b5eb93a7458.jpg)
 
 #### 2023总结
 
