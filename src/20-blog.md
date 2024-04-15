@@ -1,6 +1,6 @@
 # Impact the Future - 第二十期
 
-![Snipaste_2024-04-14_21-30-58.jpg](https://cdn.nlark.com/yuque/0/2024/jpeg/12537228/1713101643536-b974f3a8-efff-4343-8cce-48bffd7ada1b.jpeg#averageHue=%23bdc6c3&clientId=ua7763e92-43bc-4&from=paste&height=722&id=uac999023&originHeight=902&originWidth=1355&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=148819&status=done&style=none&taskId=u443ee808-286c-49cb-89c0-93912847af1&title=&width=1084)
+![image.png](../public/images/Snipaste_2024-04-14_21-30-58.jpg)
 
 
 WTM活动如期举行，这是我第二次参加了，确实在分享中能感受到来自女性的力量，也给了我一些勇气，面对选择，面对困难，我们总是胆怯自卑，但是时间会让我们学会自信，学会独立，学会变强。
