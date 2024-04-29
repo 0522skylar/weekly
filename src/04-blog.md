@@ -3,7 +3,7 @@
 10 Dec, 2023
 
 
-![Snipaste_2023-12-10_12-54-35.jpg](https://www.freeimg.cn/i/2023/12/24/6587cb2e8e112.jpg)
+![Snipaste_2023-12-10_12-54-35.jpg](../public/images/6587cb8ecef0d.jpg)
 
 广州的冬天，还像春天一样暖和，穿一件外套，就能搞定，风景和天气真的是太好了，很适合郊游！
 

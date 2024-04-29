@@ -2,7 +2,7 @@
 
 24 Nov, 2023
 
-![Cheatsheet image example](https://www.freeimg.cn/i/2023/12/24/6587cb8ecef0d.jpg)
+![Cheatsheet image example](../public/images/6587cb8ecef0d.jpg)
 这是工作日，午休时间拍的风景图，这么好的天气，真的很舒服，风是温柔的，空气是清新的，天空是明朗的，太阳是暖和的。
 
 ## 技术类学习

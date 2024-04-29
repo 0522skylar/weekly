@@ -1,6 +1,6 @@
 # 被摘掉的叶子-第十四期
 
-![image.png](../public/images/65e7db266dcc6.jpg)
+![image.png](../public/images/65e7db266dcc6.png)
 
 
 会议室的绿植，叶子被人摘了，我不太理解为什么好好的植物，有人就要去弄坏它，就像不理解为啥女孩收到鲜花就会开心一样。

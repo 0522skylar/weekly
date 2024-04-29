@@ -2,7 +2,7 @@
 # 惠州西湖-第十一期
 
 
-![image.png](https://www.freeimg.cn/i/2024/01/28/65b5ec425a11e.jpg)
+![image.png](../public/images/65b5ec425a11e.jpg)
 
 欲把西湖比西子,淡妆浓抹总相宜;听说惠州西湖是当初苏东坡被贬流放之地,从苏东坡来了之后,惠州西湖的名声就传开了,是国家5A级景区.
 

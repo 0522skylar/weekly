@@ -1,6 +1,6 @@
 # 珠江河畔（第六期）
 
-![Snipaste_2023-12-24_13-54-52.jpg](https://www.freeimg.cn/i/2023/12/24/6587c7bad0394.jpg)
+![Snipaste_2023-12-24_13-54-52.jpg](../public/images/65b5edb9e3e43.jpg)
 
 这是几个月前的照片了，跟几位同事一起去骑行的时候，拍下来的，傍晚河畔，宁静静谧。
 

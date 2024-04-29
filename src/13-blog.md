@@ -1,6 +1,6 @@
 # 泰堤坊咖喱-第十三期
 
-![image.png](https://www.freeimg.cn/i/2024/01/28/65b5ecc73e40b.jpg)
+![image.png](../public/images/65b5ecc73e40b.jpg)
 
 第一次尝试吃泰国菜，这家的咖喱就很不错，感觉有点像小时候妈妈做的土豆泥，我能混着饭吃好多晚。第一次没有踩雷的感觉真好！大家元宵快乐呀~
 

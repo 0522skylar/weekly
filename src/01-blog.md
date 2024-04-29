@@ -2,7 +2,7 @@
 
 2023-11-18
 
-![coverImg](https://www.freeimg.cn/i/2023/12/24/6587cbcb7d05f.jpg)
+![coverImg](../public/images/6587cbcb7d05f.jpg)
 
 周末天气良好，空气清新，鱼塘里鱼儿正欢快的捉迷藏，捕捉到这欢快的一幕。
 
