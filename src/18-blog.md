@@ -1,6 +1,6 @@
 # 阳台里长出一排树-第十八期
 
-![image.png](https://www.freeimg.cn/i/2024/03/31/6609457963c03.jpg)
+![image.png](../public/images/6609457963c03.jpg)
 
 
 

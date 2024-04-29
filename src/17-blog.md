@@ -1,6 +1,6 @@
 # 苍天大树-第十七期
 
-![image.png](https://www.freeimg.cn/i/2024/03/24/65ffcc99ef545.jpg)
+![image.png](../public/images/65ffcc99ef545.jpg)
 
 周末去爬山了，看到这么茂盛的树，忍不住拍下来，远远望去，就像迎客松一样，很多人都在此处停留休息和拍照，看到好的事物，就要分享呀~
 

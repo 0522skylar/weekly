@@ -1,6 +1,6 @@
 # 迷你小车-第十六期
 
-![image.png](https://www.freeimg.cn/i/2024/03/17/65f68b20c5479.jpg)
+![image.png](../public/images/65f68b20c5479.jpg)
 
 路边看到这种迷你的小车，感觉很不错，出行很方便，又不会淋到雨，而且还有点可爱。
 
