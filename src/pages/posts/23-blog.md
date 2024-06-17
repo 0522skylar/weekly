@@ -15,26 +15,26 @@ desc: 优秀的软件工程师习惯，一起变得越来越优秀呀~祝大家�
 
 #### promise
 
-[https://www.lydiahallie.com/blog/promise-execution](tab:https://www.lydiahallie.com/blog/promise-execution)
+[https://www.lydiahallie.com/blog/promise-execution](https://www.lydiahallie.com/blog/promise-execution)
 
 JavaScript中Promise对象的深入解析，它通过可视化的方式帮助读者理解Promise是如何工作的。很好奇这样的可视化工具是什么，或者是自己维护开发的。
 
 #### Tauri
 
-[https://github.com/tauri-apps/tauri](tab:https://github.com/tauri-apps/tauri)
+[https://github.com/tauri-apps/tauri](https://github.com/tauri-apps/tauri)
 
 跟electron相似，可以构建跨平台的桌面app，stars数量也很高，不知道会不会比electron省内存一些，可以试试。
 
 #### main-thread-scheduling
 
-[https://github.com/astoilkov/main-thread-scheduling](tab:https://github.com/astoilkov/main-thread-scheduling)
+[https://github.com/astoilkov/main-thread-scheduling](https://github.com/astoilkov/main-thread-scheduling)
 
 这个 JS 模块号称可以把计算量大的任务放到主进程，同时又不会阻塞主进程，UI 界面保持对用户的随时响应。它的源码有学习价值。
 
 
 #### nanid
 
-[https://github.com/ai/nanoid](tab:https://github.com/ai/nanoid)
+[https://github.com/ai/nanoid](https://github.com/ai/nanoid)
 
 一个小型、安全、URL 友好、唯一的 JavaScript 字符串 ID 生成器。
 
@@ -76,14 +76,14 @@ export let nanoid = (size = 21) => {
 
 安全随机数的生成，还可以看这篇文章：
 
-[https://gist.github.com/joepie91/7105003c3b26e65efcea63f3db82dfba](tab:https://gist.github.com/joepie91/7105003c3b26e65efcea63f3db82dfba)
+[https://gist.github.com/joepie91/7105003c3b26e65efcea63f3db82dfba](https://gist.github.com/joepie91/7105003c3b26e65efcea63f3db82dfba)
 
 ## 非技术类分享
 
 
 #### always sprinting(永远冲刺)
 
-[https://cbh.bearblog.dev/always-sprinting/](tab:https://cbh.bearblog.dev/always-sprinting/)
+[https://cbh.bearblog.dev/always-sprinting/](https://cbh.bearblog.dev/always-sprinting/)
 
 敏捷开发有一个问题，就是它要求"新的冲刺在上一个冲刺结束后立即开始。"
 有了这个规则，程序员就陷入了永远冲刺的陷阱。
@@ -93,7 +93,7 @@ export let nanoid = (size = 21) => {
 
 #### 优秀的软件工程师的习惯
 
-[https://vadimkravcenko.com/shorts/habits-of-great-software-engineers/](tab:https://vadimkravcenko.com/shorts/habits-of-great-software-engineers/)
+[https://vadimkravcenko.com/shorts/habits-of-great-software-engineers/](https://vadimkravcenko.com/shorts/habits-of-great-software-engineers/)
 
 因为喜欢编程，喜欢这份职业，所以努力朝着这个方向靠近，这些优秀的习惯，共勉！！！
 

@@ -13,18 +13,18 @@ desc: 由于最近一直下雨，所以没有怎么出去，所以也没有新�
 ## 技术类分享
 
 #### 低代码平台
-[https://github.com/nocobase/nocobase](tab:https://github.com/nocobase/nocobase)
+[https://github.com/nocobase/nocobase](https://github.com/nocobase/nocobase)
 
 这个低代码平台，可以将页面、后端、数据库进行统一调度，但是现实就是目前的低代码平台都还不能完全不由技术人员来使用，不能实现真正的脱离技术，不懂技术的人就是还不会使用，甚至实现不了自己想要的效果，我觉得这是当下低代码平台的桎梏。
 
 
 #### 前端监控
-[https://github.com/M-cheng-web/web-tracing](tab:https://github.com/M-cheng-web/web-tracing)
+[https://github.com/M-cheng-web/web-tracing](https://github.com/M-cheng-web/web-tracing)
 这个监控除了普通的日志上报，还有录屏监控的功能，要知道录屏对于页面来说是一个消耗性能的操作，之前就看到哲玄大大分享的监控路线，由于第三方使用的信息比较隐私，所以不方便给监控端提供有效的信息，但是系统发现问题需要解决，只通过文字，很难描述清楚问题，而且复现比较麻烦，所以他们后面的监控有录屏的功能，但是录屏又导致页面性能收到影响，后面他们就使用了worker，单独开线程来处理复杂逻辑，不占用主进程。
 
 #### how web works
 
-[https://github.com/vasanthk/how-web-works](tab:https://github.com/vasanthk/how-web-works)
+[https://github.com/vasanthk/how-web-works](https://github.com/vasanthk/how-web-works)
 
 
 URL “http://facebook.com/”中的尾部斜杠很重要。在这种情况下，浏览器可以安全地添加斜杠。对于 http://example.com/folderOrFile 形式的 URL，浏览器无法自动添加斜杠，因为不清楚 folderOrFile 是文件夹还是文件。在这种情况下，浏览器将访问不带斜杠的 URL，服务器将以重定向进行响应，从而导致不必要的往返。
@@ -46,14 +46,14 @@ URL “http://facebook.com/”中的尾部斜杠很重要。在这种情况下�
 
 #### 连词构造句子的方法
 
-[https://github.com/cuixueshe/earthworm](tab:https://github.com/cuixueshe/earthworm)
+[https://github.com/cuixueshe/earthworm](https://github.com/cuixueshe/earthworm)
 
 看到一个很有意思的学英语组成句子神器，这对于只知道记单词，不太懂语法的人来说真是太方便了。而且源码对于现在的我来说，也有阅读意义，客户端是用nuxt框架，api是用nest框架，node版本是20.
 
 
 #### 软件工程师的心理健康
 
-[https://vadimkravcenko.com/shorts/mental-health-in-software-engineering/](tab:https://vadimkravcenko.com/shorts/mental-health-in-software-engineering/)
+[https://vadimkravcenko.com/shorts/mental-health-in-software-engineering/](https://vadimkravcenko.com/shorts/mental-health-in-software-engineering/)
 
 心理健康原来才是被大家忽略的问题，身居高位，更容易忽略，但是心理健康和身体健康一样，都是非常重要的，不要让自己处于极度的不安之中，我们要学会放松自己内心。
 
@@ -61,7 +61,7 @@ URL “http://facebook.com/”中的尾部斜杠很重要。在这种情况下�
 
 #### 在 Google Meet 中引入自适应音频：使用多台笔记本电脑创建临时会议空间
 
-[https://workspaceupdates.googleblog.com/2024/05/google-meet-adaptive-audio.html](tab:https://workspaceupdates.googleblog.com/2024/05/google-meet-adaptive-audio.html)
+[https://workspaceupdates.googleblog.com/2024/05/google-meet-adaptive-audio.html](https://workspaceupdates.googleblog.com/2024/05/google-meet-adaptive-audio.html)
 
 
 在这个混合工作时代，我们从客户那里听说，找到一个视频会议室来加入会议通常很困难。借助“自适应音频”，您和您的团队可以使用多台笔记本电脑近距离加入 Google Meet，而不会出现尴尬的回声和音频反馈。对于没有足够的视频会议室或没有专用会议室设备资源的组织来说，这是一个很大的好处。
