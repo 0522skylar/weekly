@@ -34,6 +34,11 @@ function defaultLayoutPlugin() {
 			const imageElement = parse(tree.children[0].value).querySelector('img');
 			frontmatter.pic = imageElement.getAttribute('src');
 		}
+		if (tree.children[0]?.type === 'heading' && !frontmatter.title && tree.children[0]?.depth === 1) {
+			const h1Text = tree.children[0].children[0].value
+			frontmatter.title = h1Text
+		}
+
 		if (tree.children[1]?.children[1]?.value) {
 			frontmatter.desc = tree.children[1].children[1].value;
 		}

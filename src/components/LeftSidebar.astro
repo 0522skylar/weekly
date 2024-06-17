@@ -15,7 +15,7 @@ if (currentPageMatch.slice(-1) == '/') {
 const sidebarSections = allPosts.reduce((col, item, i) => {
 	const url = item.url;
 	const route = {
-		title: parseTitle(url),
+		title: item.frontmatter.title,
 		link: url.slice(1),
 	};
 	if (i === 0) {
