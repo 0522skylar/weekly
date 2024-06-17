@@ -1,3 +1,8 @@
+---
+date: '2024-5-20'
+pic: '../../images/Snipaste_2024-05-20_18-49-32.png'
+desc: 看到这张宇宙恒星动画时，既惊叹于宇宙的广袤无垠，又感叹于人类的渺小，如沧海一粟。
+---
 # Stars of the universe-第二十五期
 
 ![image.png](../../images/Snipaste_2024-05-20_18-49-32.png)

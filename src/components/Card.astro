@@ -8,6 +8,7 @@ export interface Props {
 const { post } = Astro.props;
 const title = parseTitle(post.url);
 const { pic, desc, date } = post.frontmatter;
+
 ---
 
 <a

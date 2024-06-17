@@ -1,3 +1,8 @@
+---
+date: '2024-4-29'
+pic: '../../images/Snipaste_2024-04-29_11-30-17.png'
+desc: 我觉得优秀的人codeView，不会忽略这三个问题，但是一般人都会忽略这三个问题，其实codeView需要从小养好习惯。
+---
 # Three little things codeview misses-第二十二期
 
 
