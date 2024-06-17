@@ -1,7 +1,7 @@
 import fs from 'fs';
 import dayjs from 'dayjs';
 import tailwind from '@astrojs/tailwind';
-import vercel from '@astrojs/vercel/serverless';
+// import vercel from '@astrojs/vercel/serverless';
 
 import { defineConfig, passthroughImageService } from 'astro/config';
 import { parse } from 'node-html-parser';
@@ -56,7 +56,5 @@ export default defineConfig({
 	markdown: {
 		remarkPlugins: [defaultLayoutPlugin],
 		rehypePlugins: [rehypeCustomizeImageSrc],
-	},
-	output: 'server',
-  adapter: vercel(),
+	}
 });

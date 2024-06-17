@@ -22,7 +22,6 @@
     "postbuild": "pagefind --site dist"
   },
   "dependencies": {
-    "@astrojs/vercel": "^7.7.0",
     "@pagefind/default-ui": "^1.1.0",
     "astro": "^4.6.1",
     "dayjs": "^1.11.10",
