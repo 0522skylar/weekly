@@ -13,7 +13,34 @@
     "email": "2031499619@qq.com"
   },
   "license": "MIT",
-  "scripts": {},
-  "dependencies": {},
-  "devDependencies": {}
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "postbuild": "pagefind --site dist"
+  },
+  "dependencies": {
+    "@astrojs/vercel": "^7.7.0",
+    "@pagefind/default-ui": "^1.1.0",
+    "astro": "^4.6.1",
+    "dayjs": "^1.11.10",
+    "lozad": "^1.16.0",
+    "motion": "^10.17.0",
+    "pagefind": "^1.1.0"
+  },
+  "devDependencies": {
+    "@astrojs/rss": "^4.0.5",
+    "@astrojs/tailwind": "^5.1.0",
+    "@tailwindcss/typography": "^0.5.12",
+    "@types/lozad": "^1.16.4",
+    "node-html-parser": "^6.1.13",
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0",
+    "rehype": "^13.0.1",
+    "rehype-parse": "^9.0.0",
+    "tailwindcss": "^3.4.3",
+    "unist-util-visit": "^5.0.0"
+  }
 }
