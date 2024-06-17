@@ -14,7 +14,7 @@ export function GET() {
   return rss({
     title: 'Skylar wekly',
     description: 'Skylar的周刊，记录Skylar有趣的生活，希望你喜欢',
-    site: '',
+    site: 'https://skylarweekly-git-main-bluelightskys-projects.vercel.app/',
     customData: ``,
     items: posts.map((item) => {
       const url = item.url;
