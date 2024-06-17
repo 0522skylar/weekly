@@ -41,6 +41,9 @@ let prevUrl = '';
 if (postIndex < allPosts.length) {
 	prevUrl = allPosts[allPosts.length - postIndex - 1].url;
 }
+const repoId = import.meta.env.REPOID
+const cateId = import.meta.env.CATEGORY_DATA
+const category = import.meta.env.CATEGORY_ID_DAT
 ---
 
 <html lang="ch" transition:animate="none">
@@ -151,7 +154,7 @@ if (postIndex < allPosts.length) {
 				.logo:active {
 					text-decoration: none;
 					border-block-end: none;
-					padding-block-end: none;
+					padding-block-end: unset;
 				}
 
 				#grid-main {
@@ -175,7 +178,7 @@ if (postIndex < allPosts.length) {
 			}
 			.heti .pay-button:hover {
 				border-block-end: none;
-				padding-block-end: 0px;
+				padding-block-end: 0;
 			}
 		</style>
 		<ViewTransitions />
@@ -228,20 +231,20 @@ if (postIndex < allPosts.length) {
 					</div>
 				</div>
 				<script
-					src="https://giscus.app/client.js"
+					src='https://giscus.app/client.js'
 					data-repo={SITE.repo}
-					data-repo-id="R_kgDOG4TsQA"
-					data-category="General"
-					data-category-id="DIC_kwDOG4TsQM4CR4bV"
-					data-mapping="title"
-					data-strict="0"
-					data-reactions-enabled="1"
-					data-emit-metadata="0"
-					data-input-position="bottom"
-					data-theme="https://gw.alipayobjects.com/os/k/we/comment.css"
-					data-lang="zh-CN"
-					data-loading="lazy"
-					crossorigin="anonymous"
+					data-repo-id={repoId}
+					data-category={category}
+					data-category-id={cateId}
+					data-mapping='title'
+					data-strict='0'
+					data-reactions-enabled='1'
+					data-emit-metadata='0'
+					data-input-position='bottom'
+					data-theme='https://gw.alipayobjects.com/os/k/we/comment.css'
+					data-lang='zh-CN'
+					data-loading='lazy'
+					crossorigin='anonymous'
 					async></script>
 			</div>
 		</main>

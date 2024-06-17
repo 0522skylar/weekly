@@ -9,5 +9,5 @@ export const SITE = {
 	blogPage: 'https://skylarweekly-git-main-bluelightskys-projects.vercel.app/',
 	twitterId: '',
 	githubId: '0522skylar',
-	repo: 'https://github.com/0522skylar/weekly.git',
+	repo: '0522skylar/weekly',
 };
