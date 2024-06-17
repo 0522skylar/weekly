@@ -12,14 +12,13 @@ export function GET() {
   posts.splice(12);
 
   return rss({
-    title: 'Med-10k周刊',
-    description: '记录医学生 10k 的不枯燥生活',
-    site: 'https://weekly.60004000.xyz/',
-    customData: `<image><url>https://gw.alipayobjects.com/zos/k/qv/coffee-2-icon.png</url></image>`,
+    title: 'Skylar wekly',
+    description: 'Skylar的周刊，记录Skylar有趣的生活，希望你喜欢',
+    site: '',
+    customData: ``,
     items: posts.map((item) => {
       const url = item.url;
-      const oldTitle = url.split('/posts/')[1];
-      const title = '第' + oldTitle.split('-')[0] + '期 - ' + oldTitle.split('-')[1];
+      const title = item.frontmatter.title;
       return {
         link: url,
         title,

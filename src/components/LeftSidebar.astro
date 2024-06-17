@@ -2,7 +2,7 @@
 const { currentPage } = Astro.props;
 import AstroLogo from './Header/AstroLogo.astro';
 import { SITE } from '@/config';
-import { parseTitle, sortPosts } from '@/utils';
+import { sortPosts } from '@/utils';
 
 const posts = await Astro.glob('../pages/posts/*.md');
 const allPosts = sortPosts(posts);

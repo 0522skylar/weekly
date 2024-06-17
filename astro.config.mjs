@@ -1,6 +1,7 @@
 import fs from 'fs';
 import dayjs from 'dayjs';
 import tailwind from '@astrojs/tailwind';
+import vercel from '@astrojs/vercel/serverless';
 
 import { defineConfig, passthroughImageService } from 'astro/config';
 import { parse } from 'node-html-parser';
@@ -8,21 +9,10 @@ import { SITE } from './src/config';
 import rehypeCustomizeImageSrc from './rehype-customize-image-src.js';
 
 const DEFAULT_FORMAT = 'YYYY/MM/DD';
-// const WEEKLY_REPO_NAME = 'tw93/weekly';
 
 function getCreateDateFormat(filePath) {
 	return dayjs(fs.statSync(filePath).birthtime).format(DEFAULT_FORMAT);
 }
-
-function getWeeklyDateFormat(num) {
-	if (num < 100) {
-		return dayjs('2022-10-10')
-			.subtract(100 - num, 'week')
-			.format(DEFAULT_FORMAT);
-	}
-	return getCreateDateFormat(filePath);
-}
-
 
 
 function defaultLayoutPlugin() {
@@ -67,4 +57,6 @@ export default defineConfig({
 		remarkPlugins: [defaultLayoutPlugin],
 		rehypePlugins: [rehypeCustomizeImageSrc],
 	},
+	output: 'server',
+  adapter: vercel(),
 });
