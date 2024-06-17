@@ -1,5 +1,7 @@
 ---
 import { parseTitle } from '@/utils';
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
 
 export interface Props {
 	post: any;
@@ -8,7 +10,8 @@ export interface Props {
 const { post } = Astro.props;
 const title = parseTitle(post.url);
 const { pic, desc, date } = post.frontmatter;
-
+const arr = pic.split('/')
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/*.{jpeg,jpg,png,gif}');
 ---
 
 <a
@@ -17,13 +20,14 @@ const { pic, desc, date } = post.frontmatter;
 	data-image={pic}
 	class="pb-3 md:mt-5 mt-4 md:mr-5 flex flex-col justify-center rounded-b-md shadow-md overflow-hidden mx-auto md:w-80 w-96 card-content preload-link"
 >
-	<img
+	<!-- <img
 		data-placeholder-background="linear-gradient(to bottom, #ece9e6, #ffffff)"
-		data-src={`${pic}?x-oss-process=image/resize,w_640/format,webp`}
+		data-src={images['/src/images/Snipaste_2024-04-14_21-30-58.jpg']()}
 		data-alt={title}
 		alt=""
 		class="lozad block md:w-80 md:h-48 w-96 h-52 rounded-t-md"
-	/>
+	/> -->
+	<Image class="lozad block md:w-80 md:h-48 w-96 h-52 rounded-t-md" src={images['/src/images/'+ arr[arr.length - 1]]()} alt={desc} />
 	<div class="w-full flex justify-between items-center leading-tight pt-4 pl-3 pr-3">
 		<div class="text-gray-800">{title}</div>
 		<div class="text-grey-darker text-sm text-gray-600">{date}</div>
