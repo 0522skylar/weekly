@@ -6,8 +6,8 @@ export const SITE = {
 	icon: '/home.png',
 	pic: '',
 	homePage: './images/6587171e08e01.png',
-	blogPage: '',
+	blogPage: 'https://skylarweekly-git-main-bluelightskys-projects.vercel.app/',
 	twitterId: '',
-	githubId: '',
+	githubId: '0522skylar',
 	repo: 'https://github.com/0522skylar/weekly.git',
 };
