@@ -63,7 +63,7 @@ SEO，即搜索引擎优化，是使您的网站对 Google 等搜索引擎更具
 
 
 video效果:
-<video width="800px" preload loop controls><source src="../../images/1720578119605.mp4" type="video/mp4"></video>
+<video width="800px" preload loop controls><source src="./1720578119605.mp4" type="video/mp4"></video>
 
 
 这表情变化的模仿还是很不错的，不过需要是正脸，效果更好，侧脸和脸不全，会有些奇怪，而且如果除了脸部表情的变动，还有头部的移动，就还是会别扭。
