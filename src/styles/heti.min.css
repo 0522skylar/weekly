@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'yangRenFangZhuShi';
+  src: url('/fonts/yang-ren-dong-zhu-shi-ti.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
   --text-font: 'LXGW WenKai Screen R', sans-serif;
   --code-text-font: 'LXGW WenKai Screen R', sans-serif;
