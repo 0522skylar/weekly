@@ -1,6 +1,7 @@
 import rss from '@astrojs/rss';
+import { getCollection } from 'astro:content';
 
-export function GET() {
+export async function GET() {
   let allPosts = import.meta.glob('./posts/*.md', { eager: true });
   let posts = Object.values(allPosts);
 
@@ -22,7 +23,7 @@ export function GET() {
       return {
         link: url,
         title,
-        description: item.compiledContent(),
+        description: item.frontmatter.desc,
         pubDate: item.frontmatter.date,
       };
     }),
