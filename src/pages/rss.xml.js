@@ -19,7 +19,6 @@ export async function GET() {
   const content = await item.compiledContent();
   return content;
 };
-console.log(posts);
   return rss({
     title: 'Skylar wekly',
     description: 'Skylar的周刊，记录Skylar有趣的生活，希望你喜欢',
@@ -27,15 +26,9 @@ console.log(posts);
     customData: ``,
     items: await Promise.all(
       posts.map(async (item) => {
-        // const [issueNumber, issueTitle] = item.url
-        //   .split("/posts/")[1]
-        //   .split("-");
-
-        
-        const title = item.frontmatter.title;
         return {
           link: item.url,
-          title,
+          title: item.frontmatter.title,
           description: await processContent(item),
           pubDate: item.frontmatter.date,
         };
