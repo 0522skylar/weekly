@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background: #f0f4f8;
+  color: #333;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.toolbar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.toolbar button,
+.toolbar select {
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  border: none;
+  font-size: 1rem;
+}
+.toolbar button {
+  background: #0077cc;
+  color: white;
+  cursor: pointer;
+}
+.toolbar button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+.text-block {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.line {
+  display: block;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.line:hover {
+  background: #f9f9f9;
+}
+.line.active {
+  background: #fff3cd;
+  font-weight: bold;
+}
+.progress {
+  text-align: center;
+  margin-top: 1rem;
+}
+.bar {
+  height: 8px;
+  width: 100%;
+  background: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.bar-fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(to right, #0077cc, #005fa3);
+  transition: width 0.3s;
+}
+  </style>
+</head>
+<body>
+  <h1>Read Along TTS Demo</h1>
+  <div class="toolbar">
+    <button id="start">Play</button>
+    <button id="pause" disabled>Pause</button>
+    <button id="resume" disabled>Resume</button>
+    <button id="stop" disabled>Stop</button>
+    <button id="reset">Reset</button>
+    <select id="voices"></select>
+  </div>
+  <div class="text-block" id="reader">
+    <span class="line">Learning to code is a never-ending journey.</span>
+    <span class="line">Technologies evolve rapidly, requiring constant adaptation.</span>
+    <span class="line">JavaScript, HTML, and CSS are essential tools for web development.</span>
+    <span class="line">Frameworks like React and Vue enhance front-end capabilities.</span>
+    <span class="line">一本是中国人写的，另一本是美国人写的。我都读了，下面就是简单的读后感。
+
+      为了便于区分，我把中国人写的那本称为"国人版"，美国人那本称为"老美版"。
+      
+      这两本书的内容，都是芯片行业的发展史。读完以后，我的最大感受是，它们可以帮你了解芯片历史，但是帮不了你了解芯片知识。
+      
+      因为它们不是科普图书，更不是技术图书，而是经管图书。
+      
+      我有点后悔，没查一下作者背景。读了才发现，这两个作者，都不是芯片行业人士，甚至不是科技从业者。
+      
+      国人版的作者是会计系毕业，后来在食品公司工作，他的上一本书写的是粮油贸易。
+      
+      老美版的作者是政治系毕业，现在是大学教授，专门研究地缘政治，上一本书写的是俄罗斯历史。
+      
+      可想而知，这样的作者写芯片行业，不会有深入浅出的技术分析，只会关注商业经营层面。
+      
+      事实上，国人版的内容，不客气地说，全部都是从新闻报道搜集整理而来，编辑成一个个故事，完全是商战书籍。
+      
+      老美版相对好一些，作者采访了一些当事人，有第一手资料，内容条理比较清楚，更像一本商业历史书。
+      
+      虽然我对缺乏技术讲解挺失望的，但是我认为，这两本书还是能带给读者收获。
+      
+      很多内容我以前就知道，比如晶体管是怎么来的、集成电路的发明人之争，但还有不少事情是这次读了才知道。
+      
+      国人版有一个专门的部分，介绍中国芯片发展史，收集了很多相关材料，我还没在其他地方见过，比如江上舟的故事、张汝京的故事、汉芯造假事件、从武汉新芯到长江存储等等，内容详细，带给人很多冲击。
+      
+      老美版的优点，前面说了，有第一手材料，站得比较高，按照编年史顺序，以人物故事的形式，理清了行业的发展脉络。虽然作者的专业是政治学，但总体上没有加入政治观点，写得比较中性客观。
+      
+      另外，老美版偶尔会有一些技术概念的通俗讲解，写得挺好。我摘录了一段芯片的种类介绍，放在后面的文摘部分，大家可以看看。
+      
+      我的结论就是，如果你单纯想了解芯片行业的基本历史，可以读老美版；如果还想了解国内芯片行业的历史，可以读国人版。</span>
+  </div>
+  <div class="progress">
+    <span id="progressText">0/0</span>
+    <div class="bar"><div class="bar-fill" id="bar"></div></div>
+  </div>
+
+  <script>
+    const lines = document.querySelectorAll('.line');
+const playBtn = document.getElementById('start');
+const pauseBtn = document.getElementById('pause');
+const resumeBtn = document.getElementById('resume');
+const stopBtn = document.getElementById('stop');
+const resetBtn = document.getElementById('reset');
+const voiceSelect = document.getElementById('voices');
+const progressText = document.getElementById('progressText');
+const progressBar = document.getElementById('bar');
+
+const synth = window.speechSynthesis;
+let voices = [];
+let currentIndex = 0;
+let currentUtterance = null;
+let isPaused = false;
+
+function populateVoices() {
+  voices = synth.getVoices();
+  voiceSelect.innerHTML = '';
+  voices.forEach((voice, index) => {
+    const opt = document.createElement('option');
+    opt.value = index;
+    opt.textContent = `${voice.name} (${voice.lang})`;
+    voiceSelect.appendChild(opt);
+  });
+}
+
+synth.onvoiceschanged = populateVoices;
+populateVoices();
+
+function updateUI() {
+  progressText.textContent = `${currentIndex + 1}/${lines.length}`;
+  progressBar.style.width = `${((currentIndex + 1) / lines.length) * 100}%`;
+}
+
+function highlightLine(index) {
+  lines.forEach((line, i) => {
+    line.classList.toggle('active', i === index);
+  });
+  lines[index]?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function speakLine(index) {
+  if (index >= lines.length) return;
+  const text = lines[index].textContent;
+  const utter = new SpeechSynthesisUtterance(text);
+  const selected = voiceSelect.value;
+  if (voices[selected]) utter.voice = voices[selected];
+  utter.rate = 1;
+
+  utter.onstart = () => {
+    highlightLine(index);
+    playBtn.disabled = true;
+    pauseBtn.disabled = false;
+    resumeBtn.disabled = true;
+    stopBtn.disabled = false;
+  };
+
+  utter.onend = () => {
+    if (!isPaused) {
+      currentIndex++;
+      if (currentIndex < lines.length) {
+        speakLine(currentIndex);
+      } else {
+        resetControls();
+      }
+    }
+  };
+
+  currentUtterance = utter;
+  synth.speak(utter);
+  updateUI();
+}
+
+function resetControls() {
+  playBtn.disabled = false;
+  pauseBtn.disabled = true;
+  resumeBtn.disabled = true;
+  stopBtn.disabled = true;
+}
+
+playBtn.onclick = () => {
+  currentIndex = 0;
+  speakLine(currentIndex);
+};
+pauseBtn.onclick = () => {
+  synth.pause();
+  isPaused = true;
+  pauseBtn.disabled = true;
+  resumeBtn.disabled = false;
+};
+resumeBtn.onclick = () => {
+  synth.resume();
+  isPaused = false;
+  pauseBtn.disabled = false;
+  resumeBtn.disabled = true;
+};
+stopBtn.onclick = () => {
+  synth.cancel();
+  resetControls();
+};
+resetBtn.onclick = () => {
+  synth.cancel();
+  currentIndex = 0;
+  highlightLine(currentIndex);
+  updateUI();
+};
+
+lines.forEach((line, index) => {
+  line.addEventListener('click', () => {
+    synth.cancel();
+    currentIndex = index;
+    speakLine(currentIndex);
+  });
+});
+
+updateUI();
+  </script>
+</body>
+</html>
