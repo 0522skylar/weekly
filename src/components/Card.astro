@@ -8,9 +8,9 @@ export interface Props {
 }
 
 const { post } = Astro.props;
-const title = parseTitle(post.url);
+const title = parseTitle(post.url, post.frontmatter.title);
 const { pic, desc, date } = post.frontmatter;
-const arr = pic.split('/')
+const arr = pic.split('/');
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/*.{jpeg,jpg,png,gif}');
 ---
 
@@ -27,14 +27,16 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/*.{jpeg
 		alt=""
 		class="lozad block md:w-80 md:h-48 w-96 h-52 rounded-t-md"
 	/> -->
-	<Image class="lozad block md:w-80 md:h-48 w-96 h-52 rounded-t-md" src={images['/src/images/'+ arr[arr.length - 1]]()} alt={desc} />
+	<Image
+		class="lozad block md:w-80 md:h-48 w-96 h-52 rounded-t-md"
+		src={images['/src/images/' + arr[arr.length - 1]]()}
+		alt={desc}
+	/>
 	<div class="w-full flex justify-between items-center leading-tight pt-4 pl-3 pr-3">
 		<div class="text-gray-800">{title}</div>
 		<div class="text-grey-darker text-sm text-gray-600">{date}</div>
 	</div>
-	<p
-		class="text-gray-600 text-sm md:w-78 w-94 overflow-hidden pt-2.5 line-clamp-2 px-3 w-full h-12"
-	>
+	<p class="text-gray-600 text-sm md:w-78 w-94 overflow-hidden pt-2.5 line-clamp-2 px-3 w-full h-12">
 		{desc}
 	</p>
 </a>
