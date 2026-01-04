@@ -26,12 +26,12 @@ desc: 这是我爬山最痛苦的一段经历了，同行的队友爬上山后�
 
 这个网站使用不同的计算机语言，通过莱布尼茨公式计算 π 值，然后给出运行速度的排名，最快是 C++（clang++），最慢是 Python （CPython）。
 
-### <font style="color:rgb(38, 38, 38);">微软开源的这个 mcp-for-beginners 不错</font>
+### 微软开源的这个 mcp-for-beginners 不错
 
 **<font style="color:rgb(38, 38, 38);"></font>**
+[https://github.com/microsoft/mcp-for-beginners/](https://github.com/microsoft/mcp-for-beginners/)
 
-[<font style="color:rgb(29, 155, 240);">https://github.com/microsoft/mcp-for-beginners/</font>](https://github.com/microsoft/mcp-for-beginners/)  
-<font style="color:rgb(38, 38, 38);">对入门者的大模型上下文协议 MCP 课程值得细看，相比每次听 USB 概念，不行系统看看。</font>
+对入门者的大模型上下文协议 MCP 课程值得细看，相比每次听 USB 概念，不行系统看看。
 
 ## 非技术类分享
 
