@@ -3,7 +3,7 @@ import dayjs from 'dayjs';
 import tailwind from '@astrojs/tailwind';
 // import vercel from '@astrojs/vercel/serverless';
 
-import { defineConfig, passthroughImageService } from 'astro/config';
+import { defineConfig } from 'astro/config';
 import { parse } from 'node-html-parser';
 import { SITE } from './src/config';
 import rehypeCustomizeImageSrc from './rehype-customize-image-src.js';
@@ -51,7 +51,7 @@ export default defineConfig({
 	prefetch: true,
 	integrations: [tailwind()],
 	image: {
-		service: passthroughImageService(),
+		// 使用 Astro 默认的 sharp 图片服务，自动优化图片格式和尺寸
 	},
 	markdown: {
 		remarkPlugins: [defaultLayoutPlugin],

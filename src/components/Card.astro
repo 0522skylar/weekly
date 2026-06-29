@@ -28,9 +28,15 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/*.{jpeg
 		class="lozad block md:w-80 md:h-48 w-96 h-52 rounded-t-md"
 	/> -->
 	<Image
-		class="lozad block md:w-80 md:h-48 w-96 h-52 rounded-t-md"
+		class="block md:w-80 md:h-48 w-96 h-52 rounded-t-md object-cover"
 		src={images['/src/images/' + arr[arr.length - 1]]()}
 		alt={desc}
+		widths={[320, 384, 640]}
+		sizes="(max-width: 768px) 384px, 320px"
+		format="webp"
+		quality={80}
+		loading="lazy"
+		decoding="async"
 	/>
 	<div class="w-full flex justify-between items-center leading-tight pt-4 pl-3 pr-3">
 		<div class="text-gray-800">{title}</div>
