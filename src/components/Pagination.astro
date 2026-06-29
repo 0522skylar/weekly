@@ -27,30 +27,30 @@ for (let i = 1; i <= totalPages; i++) {
 
 <nav class="flex justify-center items-center gap-2 mt-8 mb-4" aria-label="分页导航">
 	{prevUrl ? (
-		<a href={prevUrl} class="px-3 py-2 rounded-md text-sm text-gray-600 hover:bg-gray-100 transition-colors">
+		<a href={prevUrl} class="px-3 py-2 rounded-md text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
 			← 上一页
 		</a>
 	) : (
-		<span class="px-3 py-2 rounded-md text-sm text-gray-300 cursor-not-allowed">← 上一页</span>
+		<span class="px-3 py-2 rounded-md text-sm text-gray-300 dark:text-gray-600 cursor-not-allowed">← 上一页</span>
 	)}
 
 	{pages.map((page) =>
 		page === '...' ? (
 			<span class="px-2 py-2 text-sm text-gray-400">...</span>
 		) : page === currentPage ? (
-			<span class="px-3 py-2 rounded-md text-sm bg-gray-800 text-white font-medium">{page}</span>
+			<span class="px-3 py-2 rounded-md text-sm bg-gray-800 dark:bg-gray-200 text-white dark:text-gray-800 font-medium">{page}</span>
 		) : (
-			<a href={getPageUrl(page as number)} class="px-3 py-2 rounded-md text-sm text-gray-600 hover:bg-gray-100 transition-colors">
+			<a href={getPageUrl(page as number)} class="px-3 py-2 rounded-md text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
 				{page}
 			</a>
 		)
 	)}
 
 	{nextUrl ? (
-		<a href={nextUrl} class="px-3 py-2 rounded-md text-sm text-gray-600 hover:bg-gray-100 transition-colors">
+		<a href={nextUrl} class="px-3 py-2 rounded-md text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
 			下一页 →
 		</a>
 	) : (
-		<span class="px-3 py-2 rounded-md text-sm text-gray-300 cursor-not-allowed">下一页 →</span>
+		<span class="px-3 py-2 rounded-md text-sm text-gray-300 dark:text-gray-600 cursor-not-allowed">下一页 →</span>
 	)}
 </nav>

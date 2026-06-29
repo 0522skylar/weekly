@@ -3,14 +3,14 @@ import '@pagefind/default-ui/css/ui.css'
 import SearchIcon from './SearchIcon.astro'
 ---
 
-<site-search id='search' class='ms-auto relative md:inline-block hidden site-search'>
+<site-search id='search' class='relative md:inline-block hidden site-search'>
 	<button data-open-modal disabled class='flex items-center justify-center rounded-md gap-1 search-icon' title="输入/进行搜索">
 		<SearchIcon />
 		<!-- <span class='md:hidden text-2xl'> Search</span> -->
 	</button>
 	<dialog
 		aria-label='search'
-		class='h-full max-h-full w-full max-w-full  bg-white shadow backdrop:backdrop-blur sm:mx-auto sm:mb-auto sm:mt-16 sm:h-max sm:max-h-[calc(100%-8rem)] sm:min-h-[15rem] sm:w-5/6 sm:max-w-[48rem] sm:rounded-md opacity-0 text-left'
+		class='h-full max-h-full w-full max-w-full bg-white dark:bg-[#1a1a2e] shadow backdrop:backdrop-blur sm:mx-auto sm:mb-auto sm:mt-16 sm:h-max sm:max-h-[calc(100%-8rem)] sm:min-h-[15rem] sm:w-5/6 sm:max-w-[48rem] sm:rounded-md opacity-0 text-left'
 	>
 		<div class='dialog-frame flex flex-col gap-4 p-6 pt-12 sm:pt-6'>
 			<button
@@ -139,15 +139,16 @@ import SearchIcon from './SearchIcon.astro'
   }
 
   .search-icon {
-    position: absolute;
-    left: -40px;
-    top: -23px;
+    position: relative;
+    left: auto;
+    top: auto;
     outline: none;
   }
 
   .content-title .search-icon{
-    top: -16px;
-    left: -24px;
+    position: relative;
+    top: auto;
+    left: auto;
   }
 
   .site-search .pagefind-ui__message{

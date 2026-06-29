@@ -18,7 +18,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/*.{jpeg
 	href={post.url}
 	data-astro-prefetch
 	data-image={pic}
-	class="pb-3 md:mt-5 mt-4 md:mr-5 flex flex-col justify-center rounded-b-md shadow-md overflow-hidden mx-auto md:w-80 w-96 card-content preload-link"
+	class="pb-3 md:mt-5 mt-4 md:mr-5 flex flex-col justify-center rounded-b-md shadow-md overflow-hidden mx-auto md:w-80 w-96 card-content preload-link bg-white dark:bg-[#252540] transition-colors"
 >
 	<!-- <img
 		data-placeholder-background="linear-gradient(to bottom, #ece9e6, #ffffff)"
@@ -39,10 +39,10 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/*.{jpeg
 		decoding="async"
 	/>
 	<div class="w-full flex justify-between items-center leading-tight pt-4 pl-3 pr-3">
-		<div class="text-gray-800">{title}</div>
-		<div class="text-grey-darker text-sm text-gray-600">{date}</div>
+		<div class="text-gray-800 dark:text-gray-200">{title}</div>
+		<div class="text-grey-darker text-sm text-gray-600 dark:text-gray-400">{date}</div>
 	</div>
-	<p class="text-gray-600 text-sm md:w-78 w-94 overflow-hidden pt-2.5 line-clamp-2 px-3 w-full h-12">
+	<p class="text-gray-600 dark:text-gray-400 text-sm md:w-78 w-94 overflow-hidden pt-2.5 line-clamp-2 px-3 w-full h-12">
 		{desc}
 	</p>
 </a>

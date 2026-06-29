@@ -7,6 +7,7 @@ import Footer from '../components/Footer.astro';
 import AstroLogo from '../components/Header/AstroLogo.astro';
 import LeftSidebar from '../components/LeftSidebar.astro';
 import Search from '../components/Header/Search.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
 import { SITE } from '@/config';
 import { parseTitle, sortPosts, getIndex } from '@/utils';
 
@@ -70,11 +71,13 @@ const category = import.meta.env.CATEGORY_DATA
 				overflow-x: hidden;
 			}
 
-			.heti h1.content-title:first-child {
-				margin-block-start: 8px !important;
-				margin-bottom: 16px;
-				letter-spacing: 0.02em;
-			}
+		.heti h1.content-title:first-child,
+		.heti h1.content-title {
+			margin-block-start: 8px !important;
+			margin-bottom: 16px;
+			letter-spacing: 0.02em;
+			color: var(--theme-text) !important;
+		}
 
 			.grid-sidebar {
 				height: 100vh;
@@ -164,7 +167,8 @@ const category = import.meta.env.CATEGORY_DATA
 					padding: 0.8rem 0.5rem var(--doc-padding) 0.5rem;
 				}
 
-				.heti h1.content-title:first-child {
+				.heti h1.content-title:first-child,
+				.heti h1.content-title {
 					margin-bottom: 12px;
 					font-size: 1.8rem;
 				}
@@ -186,7 +190,7 @@ const category = import.meta.env.CATEGORY_DATA
 		<ViewTransitions />
 	</head>
 	<body>
-		<main class="layout">
+		<main class="layout" data-repo={SITE.repo} data-repo-id={repoId} data-category={category} data-cate-id={cateId}>
 			<aside id="grid-left" class="grid-sidebar" title="Site Navigation">
 				<LeftSidebar currentPage={currentPage}/>
 			</aside>
@@ -195,22 +199,27 @@ const category = import.meta.env.CATEGORY_DATA
 					class="markdown-body heti md:mx-auto md:pb-20 pb-14 xl:max-w-7xl w-full lg:max-w-5xl md:max-w-2xl md:pl-3.5"
 					id="write"
 				>
-					<h1 class="content-title flex align-middle text-gray-800">
+				<div class="flex items-center justify-between mb-4 gap-3">
+					<h1 class="content-title flex align-middle text-gray-800 dark:text-gray-200 !mb-0">
 						<a class="logo inline-block md:hidden visible" href="/"><AstroLogo size={40} /> </a>
-						<span data-pagefind-meta="title">{title}</span>
-						<Search />
+						<span data-pagefind-meta="title" class="!text-gray-800 dark:!text-gray-200">{title}</span>
 					</h1>
+					<div class="flex items-center gap-2 flex-shrink-0">
+						<Search />
+						<ThemeToggle />
+					</div>
+				</div>
 					<slot />
 					<hr />
 					<div class="flex justify-between md:flex-row flex-col mt-2 post-footer">
-						<div class="text-gray-800 flex-1">
-							发布日期：<a
-								href={`https://github.com/${SITE.repo}/tree/main/src/pages${url}.md`}
-								target="_blank"
-								data-pagefind-sort="date"
-								title="Edit">{date}</a
-							>
-						</div>
+					<div class="text-gray-800 dark:text-gray-300 flex-1">
+						发布日期：<a
+							href={`https://github.com/${SITE.repo}/tree/main/src/pages${url}.md`}
+							target="_blank"
+							data-pagefind-sort="date"
+							title="Edit">{date}</a
+						>
+					</div>
 						<div class="md:mt-0 mt-4 flex-1 text-right">
 							{nextUrl ? <a href={nextUrl}>下一篇 |</a> : null}
 							{prevUrl ? <a href={prevUrl}>上一篇 |</a> : null}
@@ -232,21 +241,35 @@ const category = import.meta.env.CATEGORY_DATA
 						</div>
 					</div>
 				</div>
-				<script
-					src='https://giscus.app/client.js'
-					data-repo={SITE.repo}
-					data-repo-id={repoId}
-					data-category={category}
-					data-category-id={cateId}
-					data-mapping='title'
-					data-strict='0'
-					data-reactions-enabled='1'
-					data-emit-metadata='0'
-					data-input-position='bottom'
-					data-lang='zh-CN'
-					data-loading='lazy'
-					crossorigin='anonymous'
-					async></script>
+			<div id="giscus-container"></div>
+			<script is:inline>
+				function loadGiscus() {
+					const container = document.getElementById('giscus-container');
+					if (!container) return;
+					container.innerHTML = '';
+					const mainEl = container.closest('main');
+					if (!mainEl) return;
+					const theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+					const script = document.createElement('script');
+					script.src = 'https://giscus.app/client.js';
+					script.setAttribute('data-repo', mainEl.dataset.repo || '');
+					script.setAttribute('data-repo-id', mainEl.dataset.repoId || '');
+					script.setAttribute('data-category', mainEl.dataset.category || '');
+					script.setAttribute('data-category-id', mainEl.dataset.cateId || '');
+					script.setAttribute('data-mapping', 'title');
+					script.setAttribute('data-strict', '0');
+					script.setAttribute('data-reactions-enabled', '1');
+					script.setAttribute('data-emit-metadata', '0');
+					script.setAttribute('data-input-position', 'bottom');
+					script.setAttribute('data-theme', theme);
+					script.setAttribute('data-lang', 'zh-CN');
+					script.setAttribute('data-loading', 'lazy');
+					script.crossOrigin = 'anonymous';
+					script.async = true;
+					container.appendChild(script);
+				}
+				document.addEventListener('astro:page-load', loadGiscus);
+			</script>
 			</div>
 		</main>
 		<Footer />
